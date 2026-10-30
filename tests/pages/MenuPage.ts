@@ -36,7 +36,7 @@ export class MenuItem {
 
   constructor(readonly root: Locator) {
     this.name = root.getByRole('heading', { level: 3 });
-    // The description is the paragraph directly under the name.P
+    // The description is the paragraph directly under the name.
     this.description = root.locator('h3 + p');
     this.image = root.getByRole('img');
     this.decrementButton = root.getByRole('button', { name: MINUS_SIGN, exact: true });
